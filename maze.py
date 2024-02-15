@@ -7,8 +7,6 @@
 
     
     By Justin Freed
-
-
 """
 
 import time
@@ -211,7 +209,7 @@ def main_entrance():
 
 # Simple "You died" function
 # Called whenever branch of storyline ends with users' death
-# (tried to make it dark souls style death screen)
+
 
 def you_died():
     n = 0
@@ -384,8 +382,7 @@ def air_vent():
 
     # Air vent choice function - left choice
 def airvent_left():
-    # have this direction lead to a giant fan and have it suck the user towards it
-    # the user then has to check to see if they're strong enough to escape the pull of the fan
+   
     time.sleep(1)
     print("\nYou choose to go left.\n")
     time.sleep(2)
@@ -398,7 +395,7 @@ def airvent_left():
     print("\nYou feel a pretty strong pull towards the fan.\n")
     time.sleep(3)
     print("\nYou struggle for grip against the walls of the vent.\n")
-    time.sleep(2)
+    time.sleep(3)
 
     escape_the_fan = input("\nEnter 'e' to try and escape the fan: ")
 
@@ -406,25 +403,133 @@ def airvent_left():
 
 
     if chance >= 5:
-        print("success")
+        time.sleep(2)
+        print("\nSuddenly, a surge of energy rushes through your body.\n")
+        time.sleep(3)
+        print("\nYou shimmey away from the fan.\n")
+        time.sleep(2)
+        print("\nYou manage to escape and head back where you came from.\n")
+        time.sleep(3.5)
+        airvent_back()
+        
     elif chance < 5:
         print("\nThe fan's strength is no match for your puny little legs.\n")
+        time.sleep(3)
+        print("\nYou lose grip and get pulled into the fan blades, getting chopped up alive...\n")
+        time.sleep(4)
+        you_died()
     else:
         time.sleep(2)
         print("INVALID INPUT")
         airvent_left()
 
+    # Function for doing back to the original T junction and giving the user a choice between
+    # Left and right again
+def airvent_back():
 
+    print("\nYou crawl back to the T-junction.\n")
     
-    time.sleep(4)
+    time.sleep(3)
+
+    direction = input("\nWhich direction are you going? 'left'/'right': ")
+
+    if direction == "left":
+        airvent_left()
+    elif direction == "right":
+        airvent_right()
+    else:
+        print("INVALID INPUT")
+        time.sleep(2)
+        airvent_back()
     
 
-    # Air vent choice funtion - right choice
+# Air vent choice funtion - right choice
+"""""
+have the right direction have a dropdown into another room or continue straight.
+along that split have the straight direction lead to a dead end with another drop, forcing the user to drop down.
+have the first drop down room be a death trap of some sort.
+the next drop down room can be the exit to the location the user is in (dungeon thing?)
+
+OR
+
+the first drop down reveals a torture room with blood a table and body parts everywhere.
+the user keeps going straight and the vent ends with another drop down, this time revealing another room
+that has something to do with either finding the "golden leaf" or it has clues or it actually has it and the user has to 
+escape booby traps and outrun the creature that lurks in the dungeon.
+"""""
 def airvent_right():
-    print("right")
+    time.sleep(2)
+    print("\nYou choose to go right.\n")
+    time.sleep(3)
+    print("\nMaking your way down the vent, you notice another vent opening on the bottom.\n")
+    time.sleep(4)
+    print("\nAlong with the vent continuing straight ahead.\n")
+    time.sleep(3)
+    print("\nYou slowly inch your way towards it and peek down to see what's below you.\n")
+    time.sleep(4)
+    print("\nDirectly below the vent is a table. A closer observation reveals blood covering the top.\n")
+    time.sleep(5)
+    print("\nIt appears to be some sort of torture chamber, with all sorts of instruments and cabinets lining the walls.\n")
+    time.sleep(5)
+    print("\nRight next to the table is a drain.\n")
+    time.sleep(3)
+    print("\nYou wince at the thought of what goes on in this room.\n")
+    time.sleep(5)
+    print("\nYou continue along the vent, avoiding that room at all costs.\n")
+    time.sleep(3)
+    print("\nAhead you can see another vent opening on the bottom. The path also stops here.\n")
+    time.sleep(4)
+    print("\nMoving forward is not an option...\n")
+    time.sleep(4)
+    print("\nYou peek down this vent now.\n")
+    time.sleep(3)
+    print("\nThrough the opening you don't see much. Just a dark space.\n")
+    time.sleep(3)
+    print("\nYou decide to 'leap of faith' and jump down, hoping to find a way out.\n")
+    
+    # New Function call
+    escape_the_vent()
 
 
 
+
+def escape_the_vent():
+    time.sleep(4)
+    print("\nYou come crashing to the ground, unaware of how high above the ground the vent was.\n")
+    time.sleep(4)
+    print("\nFortunately, you only take slight damage.\n")
+    time.sleep(3)
+    print("\nYou stand up and brush yourself off, as if nothing ever happened.\n")
+    time.sleep(3)
+    print("\nYou're in a hallway lined with torches.\n")
+    time.sleep(3)
+    print("\nYou look to the left and notice a big metal door which appears to be where you just were.\n")
+    time.sleep(4)
+    print("\nLooking to the right, you notice the hallway extends for some distance.\n")
+    time.sleep(4)
+    print("\nYou start walking in that direction, curious of what's down there.\n")
+    time.sleep(4)
+    print("\nAs you get closer to the end, you notice another door at the far end of the hallway.\n")
+    time.sleep(4)
+    print("\nYou notice that there's another opening to your left.\n")
+
+    choice = input("\nWhat's your next move? (left/straight): ")
+
+    if choice == "left":
+        left_hallway()
+    elif choice == "straight":
+        print("straight")
+    else:
+        print("INVALID")
+        time.sleep(2)
+        escape_the_vent()
+
+def left_hallway():
+    time.sleep(2)
+    print("\nYou turn down the hallway to the left.\n")
+    time.sleep(2)
+    print("\n")
+    
 
 
 
@@ -444,6 +549,12 @@ def airvent_right():
 
 def entity_encounter():
 
+    """"
+the creature is humanoid with a lizard-like face, pointed nose and viscious looking teeth.
+along with a long tail, no visible ears and webbed fingers and toes.
+the creature always seems to be drooling and has something dripping from its mouth.
+it's at least 7 feet tall and has a horrendous smell.
+    """
     print("\nA humanoid creature stands in the doorway. It has 6 arms and is incredibly buff.\n")
     time.sleep(4)
     print("\nIts head comes to a point like some sort of dinosaur.\n")
@@ -459,7 +570,7 @@ def entity_encounter():
     print("\nYou now realize your fate.\n")
     time.sleep(3)
     print("\n'Hey, haven't you heard of mouthwash?'")
-    time.sleep(1)
+    time.sleep(1.5)
     print("You heckle the creature. Hoping to get a reaction to prolong your inevitable death.\n")
     time.sleep(2)
     print("\nThe creature freezes. Looking like its processing what you said.\n")
@@ -472,8 +583,8 @@ def entity_encounter():
     time.sleep(4)
     print("\nWhatever gas that coming out of it mouth is so intense, you lose the ability to breathe.\n")
     time.sleep(4)
-    print("\nYou attempt to hold out as long as it takes in order to gain back the ability to breathe.\n")
-    time.sleep(4)
+    print("\nYou attempt to hold out as long as it takes.\n")
+    time.sleep(3)
     print("\nIt seems like an eternity before it stops. You catch your breath.\n")
     time.sleep(4)
     print("\n")    
@@ -485,7 +596,7 @@ def entity_encounter():
 
 
 # Start game initial function
-#start_game()
+start_game()
 #you_died()
 #air_vent()
-airvent_left()
+#airvent_back()
