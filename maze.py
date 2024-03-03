@@ -12,9 +12,6 @@
 import time
 import random
 
-
-
-
 # Introduction function
 # Gets user's name, welcomes them and briefs them on the objective.
 
@@ -64,7 +61,7 @@ def start_game():
         start_maze()
     else:
 
-        #Trollololol (idk why i did this lol)
+
         print("K, bye!")
         print("Program will end in 2000 seconds")
 
@@ -121,7 +118,7 @@ def start_maze():
     time.sleep(3)
     print("\nYou notice a sign above the door.")
     time.sleep(2)
-    print("It reads:\n")
+    print("It reads:\n\n")
     time.sleep(2)
     print("You shall not pass\n")
     print("Danger ahead\n")
@@ -444,19 +441,7 @@ def airvent_back():
     
 
 # Air vent choice funtion - right choice
-"""""
-have the right direction have a dropdown into another room or continue straight.
-along that split have the straight direction lead to a dead end with another drop, forcing the user to drop down.
-have the first drop down room be a death trap of some sort.
-the next drop down room can be the exit to the location the user is in (dungeon thing?)
 
-OR
-
-the first drop down reveals a torture room with blood a table and body parts everywhere.
-the user keeps going straight and the vent ends with another drop down, this time revealing another room
-that has something to do with either finding the "golden leaf" or it has clues or it actually has it and the user has to 
-escape booby traps and outrun the creature that lurks in the dungeon.
-"""""
 def airvent_right():
     time.sleep(2)
     print("\nYou choose to go right.\n")
@@ -518,7 +503,7 @@ def escape_the_vent():
     if choice == "left":
         left_hallway()
     elif choice == "straight":
-        print("straight")
+        straight_hallway()
     else:
         print("INVALID")
         time.sleep(2)
@@ -528,12 +513,43 @@ def left_hallway():
     time.sleep(2)
     print("\nYou turn down the hallway to the left.\n")
     time.sleep(2)
-    print("\n")
+    print("\nThe only thing you can see is absolutely nothing. Just pitch darkness.\n")
+    time.sleep(3)
+    print("\nAgainst your better judgement, you continue to walk down the hall.\n")
+    time.sleep(4)
+    print("\nYour next step will be your downfall unfortunately.\n")
+    time.sleep(3)
+    print("\nThe ground beneath you suddenly opens up like a pair of trapdoors.\n")
+    time.sleep(3)
+    print("\nYou feel weightless and fall for what seems like an eternity.\n")
+    time.sleep(3)
+    print("\nWhen in reality, you fall for about 10 seconds.\n")
+    time.sleep(3)
+    print("\nWithin that timeframe, you have time to think to yourself and reflect.\n")
+    time.sleep(5)
+    print("\nYou know you aren't surviving this fall.\n")
+    time.sleep(3)
+    print("\nAt the bottom of the pit are a set of very long sharp spikes that's made out of some kind of stone.\n")
+    time.sleep(6)
+    print("\nAlthough you don't know what happened because.....")
+    time.sleep(1)
+    you_died()
+
+
+
+
+
+def straight_hallway():
+    print("\nYou continue down to the end of the hallway where you're greeted by a stone door.\n")
+    time.sleep(3)
+    print("\nYou push on the door slowly.\n")
+    time.sleep(3)
+    print("\nAs it opens, you see a dome shaped room, carved out of stone.\n")
+    time.sleep(3)
+    print("\nThe room seems empty, but upon further examination you notice an elevated platform surrounding the whole room.\n")
+    time.sleep(5)
+    print("\nOn the ceiling of the room\n")
     
-
-
-
-
 
 
 
@@ -549,15 +565,10 @@ def left_hallway():
 
 def entity_encounter():
 
-    """"
-the creature is humanoid with a lizard-like face, pointed nose and viscious looking teeth.
-along with a long tail, no visible ears and webbed fingers and toes.
-the creature always seems to be drooling and has something dripping from its mouth.
-it's at least 7 feet tall and has a horrendous smell.
-    """
-    print("\nA humanoid creature stands in the doorway. It has 6 arms and is incredibly buff.\n")
+
+    print("\nA humanoid creature with a lizard-like face stands in the doorway.\n")
     time.sleep(4)
-    print("\nIts head comes to a point like some sort of dinosaur.\n")
+    print("\nIts nose comes to a point like some sort of dinosaur.\n")
     time.sleep(3)
     print("\nIt reveals its teeth as it lunges forward at you.\n")
     time.sleep(3)
@@ -587,9 +598,20 @@ it's at least 7 feet tall and has a horrendous smell.
     time.sleep(3)
     print("\nIt seems like an eternity before it stops. You catch your breath.\n")
     time.sleep(4)
-    print("\n")    
+    print("\nThe creature snarls and looks at you with the attitude of a 16 year-old girl.\n")
+    time.sleep(1)
+    print("\n") 
+    time.sleep(4)
+    print("\n'You don't like that?' The creature mutters to you.\n")
+    time.sleep(3)
+    print("\n'Dude, what even are you? You look like the offspring of godzilla and the T-rex from 'Jurassic Park'.")
+    time.sleep(1)
+    print("You reply.")
+    time.sleep(4)
+    print("\n'Hm.. Dinner that can roast me. Funny. I'll remember that when I rip your arms out of their sockets and slap you with them after I kill you.")   
     
     # creature breaths in users face and makes a big deal about it
+    # this encounter ends with the user dying, possibly having it a chance opportunity
 
 
 
@@ -597,6 +619,3 @@ it's at least 7 feet tall and has a horrendous smell.
 
 # Start game initial function
 start_game()
-#you_died()
-#air_vent()
-#airvent_back()
