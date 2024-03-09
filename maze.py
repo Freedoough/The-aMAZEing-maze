@@ -45,11 +45,6 @@ def intro():
         time.sleep(.75)
         print("\n")
 
-
-
-
-
-
 # Start game function
 # Starts game, calls intro function, asks user if they want to start game.
 # Simple if else statement for various answers.
@@ -62,7 +57,6 @@ def start_game():
         start_maze()
     else:
 
-        #Trollololol (idk why i did this lol)
         print("K, bye!")
         print("Program will end in 2000 seconds")
 
@@ -125,9 +119,6 @@ def start_maze():
     time.sleep(4)
 
     CHOICE_enter_main_door()
-
-
-
 
 
 # Prompts the user if they want to enter the main door and continues with story
@@ -293,9 +284,7 @@ def break_free_from_chair():
         time.sleep(2)
         print("INVALID INPUT")
         break_free_result()
-
-
-     
+    
 
 # Function that receives return value of break free prompt and goes from there
 
@@ -470,8 +459,6 @@ def airvent_right():
     escape_the_vent()
 
 
-
-
 def escape_the_vent():
     time.sleep(4)
     print("\nYou come crashing to the ground, unaware of how high above the ground the vent was.\n")
@@ -503,6 +490,7 @@ def escape_the_vent():
         time.sleep(2)
         escape_the_vent()
 
+# Function for turning left in the hallway
 def left_hallway():
     time.sleep(2)
     print("\nYou turn down the hallway to the left.\n")
@@ -529,8 +517,7 @@ def left_hallway():
     time.sleep(1)
     you_died()
 
-
-
+# Function for going straight in the hallway
 def straight_hallway():
     print("\nYou continue down to the end of the hallway where you're greeted by a stone door.\n")
     time.sleep(3)
@@ -563,7 +550,7 @@ def straight_hallway():
     if random_num >= 10:
         dodge_success()
     elif random_num <= 9:
-        # Add more print statements and user dies
+        
         print("\nYou unsuccessfully dodge the projectiles.\n")
         time.sleep(4)
         print("\nTime returns to normal as you get hit with an arrow in the arm.\n")
@@ -585,9 +572,7 @@ def straight_hallway():
         print("\nAs the poison flows through your body, you slowly drift into unconsciousness.\n")
         time.sleep(4)
         you_died()
-
-
-        
+   
     else:
         print("INVALID")
         time.sleep(2)
@@ -611,10 +596,8 @@ def dodge_success():
     time.sleep(.5)
     print("You mumble to yourself.")
     agility_maneuver()
-
-
     
-    
+   # Function that outlines the maneuver the user must make in order to obtain the leaf 
 def agility_maneuver():
     time.sleep(2)
     print("\nYou analyze the room and calculate a way to get to the ceiling.\n")
@@ -627,6 +610,7 @@ def agility_maneuver():
     time.sleep(5)
     print("\n")
 
+    # Chance attempt at successfully executing the maneuver or not
     def attempt():
 
         user_attempt = input("\nAttempt to perform this maneuver by entering 'A': ").capitalize()
@@ -662,12 +646,100 @@ def agility_maneuver():
 
     attempt()       
 
-
+# Function for the end of the game and the execution of the maneuver
 def end_game():
-    print("end game stuff here")
+    time.sleep(2)
+    print("\nYou plan out your maneuver in your head, looking at the platform, and then the wall.\n")
+    time.sleep(4)
+    print("\nYou let out a sharp breath, planning for the worst.\n")
+    time.sleep(3)
+    print("\nYou back up to the far side of the room to try to get as much speed as possible.\n")
+    time.sleep(4)
+    print("\n'Here goes nothing..'")
+    time.sleep(2)
+    print("You whisper to yourself.\n")
+    time.sleep(5)
+    print("\nYou sprint as fast as you can towards the other side of the room.\n")
+    time.sleep(3.5)
+    print("\nAs you approach the underside of the platform, you jump and land your feet on the wall, keeping your feet in motion to not lose momentum.\n")
+    time.sleep(5)
+    print("\nYou push off the wall and reach your arm out to the edge of the platform, gripping it as tight as you can.\n")
+    time.sleep(4)
+    print("\nYou twist your body to face the wall and get your other hand on the platform.\n")
+    time.sleep(4)
+    print("\nYou manage to pull yourself up onto the platform.\n")
+    time.sleep(4)
+    print("\nNearly out of breath, you stand yourself up and get your bearings again.\n")
+    time.sleep(4)
+    print("'One part down, one to go.'")
+    time.sleep(1.5)
+    print("You whisper to yourself again.\n")
+    time.sleep(3)
+    print("\nYou do the same thing, this time running parallel to the wall.\n")
+    time.sleep(4)
+    print("\nYou pick up speed and jump, planting your feet on the wall.\n")
+    time.sleep(3)
+    print("\nBeing careful not to lose speed, you push off the wall and twist your body towards the center of the room.\n")
+    time.sleep(5)
+    print("\nAs you're middair, you can see the leaf within your grasp.\n")
+    time.sleep(3)
+    print("\nTime slows down, you reach out for the leaf as it's inches away from your hand.\n")
+    time.sleep(4)
+    print("\nYou then feel it's soft texture in your hand and 'firmly grasp it'.\n")
+                                                    # Spongebob reference ^^^
+    time.sleep(4)
+    print("\nAs you feel that you have it, you do a backflip with the momentum you have form pushing off the wall.\n")
+    time.sleep(5)
+    print("\nGravity pulls you down, and you heroically come smashing to the ground in a 'superhero landing'.\n")
+    time.sleep(4)
+    print("\nYou take a moment to realize what you've achieved and stand back up.\n")
+    time.sleep(4)
+    print("\nTaking a look at the leaf, it starts to glow and gets brighter and brighter.\n")
+    time.sleep(4)
+    print("\nThe light transfers through your body and you feel an immense sensation that's been transferred toi you through the leaf.\n")
+    time.sleep(5)
+    print("\nThe feelings subsides after a few moments. You hold out your hands in front of you, feeling the power you just obtained.\n")
+    time.sleep(5)
+    print("'I did it..'")
+    time.sleep(1.5)
+    print("You say to yourself.\n")
+    time.sleep(5)
+    congratulations()
 
 
+# Congratulating the user on successfully finding the leaf and obtaining it
+def congratulations():
 
+    i = 0
+
+    while i < 10:
+        i += 1
+        time.sleep(.75)
+        print("\n")
+
+    print("CONGRATULATIONS!\n")
+    time.sleep(4)
+    print("You found the leaf and completed the objective!")
+
+    time.sleep(4)
+
+    play_again = input("Play again? (y/n): ").capitalize()
+
+    if play_again == "Y":
+        start_game()
+    elif play_again == "N":
+        time.sleep(5)
+        print("Thanks for playing!")
+        time.sleep(2)
+        exit
+    else:
+        print("INVALID")
+        time.sleep(2)
+        print("(it doesn't matter anymore!)")
+        time.sleep(2)
+        print("Goodbye :)")
+        time.sleep(2)
+        exit
 
 
 # Entity encounter
@@ -737,11 +809,6 @@ def entity_encounter():
     time.sleep(3)
     
     you_died()
-
-
-
-    # this encounter ends with the user dying, possibly having it a chance opportunity
-    # boss fight in order to get the stupid "leaf of legends"
 
 
 
