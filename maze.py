@@ -2,8 +2,9 @@
     This is a simple maze adventure game script thing
     for the purpose of learning to code with python.
     
-    I hope it's as much fun executing as it was writing it
-    and experimenting with the python language.
+    I hope it's as enjoyable to run as it was to write.
+
+            :)
 
     
     By Justin Freed
@@ -56,12 +57,12 @@ def intro():
 def start_game():
     intro()
     time.sleep(3)
-    choice = input("Ready to start? (y/n):")
-    if choice == "y":
+    choice = input("Ready to start? (y/n):").capitalize
+    if choice == "Y":
         start_maze()
     else:
 
-
+        #Trollololol (idk why i did this lol)
         print("K, bye!")
         print("Program will end in 2000 seconds")
 
@@ -98,7 +99,7 @@ def start_maze():
     time.sleep(3)
     print("\nYou mumble to yourself 'I have awoken'.\n")
     time.sleep(4)
-    print("\nIn front of you lies a very large mountain.\n")
+    print("\nIn front of you lies a very big mountain.\n")
     time.sleep(3)
     print("\nAt the base of the mountain is a gateway. Which seems to be made out of marble.\n")
     time.sleep(4)
@@ -196,10 +197,6 @@ def main_entrance():
         print("\n")
 
     wake_up()
-
-
-
-
 
 
 # Simple "You died" function
@@ -309,9 +306,7 @@ def break_free_result():
         time.sleep(3)
         print("\nYou make a b-line for the door you just realized was in front of you.\n")
         time.sleep(4)
-        print("\nYou try the handle. Of course it's locked, dummy.")
-        time.sleep(1)
-        print("JK <3\n")
+        print("\nYou try the handle. It's locked.")
         time.sleep(3)
         print("\nYou look around for other means of escape.\n")
         time.sleep(3)
@@ -470,7 +465,8 @@ def airvent_right():
     time.sleep(3)
     print("\nYou decide to 'leap of faith' and jump down, hoping to find a way out.\n")
     
-    # New Function call
+    # Escape the vent function call
+    # The user escapes through the vent to find a way out
     escape_the_vent()
 
 
@@ -496,11 +492,11 @@ def escape_the_vent():
     time.sleep(4)
     print("\nYou notice that there's another opening to your left.\n")
 
-    choice = input("\nWhat's your next move? (left/straight): ")
+    choice = input("\nWhat's your next move? (left/straight): ").capitalize
 
-    if choice == "left":
+    if choice == "LEFT":
         left_hallway()
-    elif choice == "straight":
+    elif choice == "STRAIGHT":
         straight_hallway()
     else:
         print("INVALID")
@@ -535,8 +531,6 @@ def left_hallway():
 
 
 
-
-
 def straight_hallway():
     print("\nYou continue down to the end of the hallway where you're greeted by a stone door.\n")
     time.sleep(3)
@@ -544,14 +538,133 @@ def straight_hallway():
     time.sleep(3)
     print("\nAs it opens, you see a dome shaped room, carved out of stone.\n")
     time.sleep(3)
-    print("\nThe room seems empty, but upon further examination you notice an elevated platform surrounding the whole room.\n")
+    print("\nThe room seems empty, but upon further examination you notice an elevated platform lining the wall.\n")
     time.sleep(5)
-    print("\nOn the ceiling of the room\n")
+    print("\nOn the ceiling of the room, you notice a shiny object.\n")
+    time.sleep(3)
+    print("\nYou take a few steps closer to get a better look, as you suspect it might be the 'Leaf of Legends'\n")
+    time.sleep(4)
+    print("\nDistracted by the shiny object, you unknowingly step on a pressure plate planted in the ground.\n")
+    time.sleep(4)
+    print("\nThe plate moves down as your weight is supplied to it.\n")
+    time.sleep(3)
+    print("\nYou then hear the sound of stones grinding together as multiple openings from every angle of the room in the walls open up.\n")
+    time.sleep(5)
+    print("\nWithin miliseconds, arrows covered in some sort of poison are shot out of every hole in the wall from all angles.\n")
+    time.sleep(4)
+    print("\nTime appears to slow down to a halt...\n")
+    time.sleep(6)
+
+
+    dodge = input("\nEnter 'D' to attempt to dodge the arrows being shot at you: ").capitalize
+
+    random_num = random.randint(1,20)
+
+    if random_num >= 10:
+        dodge_success()
+    elif random_num <= 9:
+        # Add more print statements and user dies
+        print("\nYou unsuccessfully dodge the projectiles.\n")
+        time.sleep(4)
+        print("\nTime returns to normal as you get hit with an arrow in the arm.\n")
+        time.sleep(3)
+        print("\nThe poison starts to enter your body.\n")
+        time.sleep(3)
+        print("\nYou get hit with another arrow in your upper back, and then your lower back.\n")
+        time.sleep(1)
+        print("\nSpeeding up the process of the poison being injected into your body.\n")
+        time.sleep(4)
+        print("\nYou're pelted with more arrows all over your body.\n")
+        time.sleep(4)
+        print("\nAs the poison enters your body, you start to feel the effects.\n")
+        time.sleep(4)
+        print("\nGrowing weaker, you are unable to support yourself anymore.\n")
+        time.sleep(4)
+        print("\nYou collapse on the ground, feeling sick and weak. Unable to move.\n")
+        time.sleep(4)
+        print("\nAs the poison flows through your body, you slowly drift into unconsciousness.\n")
+        time.sleep(4)
+        you_died()
+
+
+        
+    else:
+        print("INVALID")
+        time.sleep(2)
+        straight_hallway()
+
+def dodge_success():
+    time.sleep(2)
+    print("\nYou successfully dodge all of the arrows in a 'Matrix'-like fashion.\n")
+    time.sleep(3)
+    print("\nLuckily, only one arrow per opening in the wall was fired out.\n")
+    time.sleep(4)
+    print("\nYou let out a sigh of relief and gather your bearings in the room.\n")
+    time.sleep(4)
+    print("\nYou look at the pressure plate in the floor that you stepped on to trigger the booby trap you almost died from.\n")
+    time.sleep(5)
+    print("\nYou shake your head at it, tauntingly.\n")
+    time.sleep(4)
+    print("\nLooking back up at the shiny object, you notice it's a leaf shape.\n")
+    time.sleep(4)
+    print("\n'Could it be?'")
+    time.sleep(.5)
+    print("You mumble to yourself.")
+    agility_maneuver()
+
+
     
+    
+def agility_maneuver():
+    time.sleep(2)
+    print("\nYou analyze the room and calculate a way to get to the ceiling.\n")
+    time.sleep(3)
+    print("\nLooking at the platform, and then at the leaf, you think to yourself:")
+    time.sleep(3)
+    print("\n'If I get enough speed, maybe I can execute a wallrun, jump, grab the platform, pull myself up.")
+    time.sleep(3)
+    print("'Then wallrun again, kick the wall to push myself towards the center and grab the leaf.'")
+    time.sleep(5)
+    print("\n")
+
+    def attempt():
+
+        user_attempt = input("\nAttempt to perform this maneuver by entering 'A': ").capitalize()
+
+        if user_attempt == "A":
+
+            agility_check = random.randint(0,20)
+
+            if agility_check >= 10:
+                end_game()
+            elif agility_check <= 9:
+                print("\nYou go to wallrun, but as you gain speed and get on the wall, you trip on a bug and you faceplant into the wall.\n")
+                time.sleep(3)
+                print("\nYou were unsuccessful in your attempt...\n")
+                time.sleep(3)
+                try_again = input("Try again?(y/n): ").capitalize()
+        
+                if try_again == "Y":
+                    time.sleep(2)
+                    attempt()
+                elif try_again == "N":
+                    print("\nExiting program...")
+                    time.sleep(3)
+                    exit
+                else:
+                    print("INVLAID")
+                    agility_maneuver()
+        else:
+            print("INVALID")
+            time.sleep(3)
+            attempt()
 
 
+    attempt()       
 
 
+def end_game():
+    print("end game stuff here")
 
 
 
@@ -564,7 +677,7 @@ def straight_hallway():
 def entity_encounter():
 
 
-    print("\nA humanoid creature with a lizard-like face stands in the doorway.\n")
+    print("\nA humanoid creature with a lizard-like face, pointed nose and viscious looking teeth stands in the doorway.\n")
     time.sleep(4)
     print("\nIts nose comes to a point like some sort of dinosaur.\n")
     time.sleep(3)
@@ -588,7 +701,7 @@ def entity_encounter():
     time.sleep(3)
     print("\nIt then closes its mouth and takes a breath deeper than 'The Mariana Trench'.\n")
     time.sleep(4)
-    print("\nThe mockingly smiles at you and then breaths out every square inch of oxygen out ot its system.\n")
+    print("\nThe mockingly smiles at you and then breaths out every square inch of oxygen out of its system.\n")
     time.sleep(4)
     print("\nWhatever gas that coming out of it mouth is so intense, you lose the ability to breathe.\n")
     time.sleep(4)
@@ -607,10 +720,28 @@ def entity_encounter():
     print("You reply.")
     time.sleep(4)
     print("\n'Hm.. Dinner that can roast me. Funny. I'll remember that when I rip your arms out of their sockets and slap you with them after I kill you.")   
+    time.sleep(4)
+    print("\nYou feel the hairs on the back of your neck stand up.\n")
+    time.sleep(3)
+    print("\nBut you don't show your fear to the creature.\n")
+    time.sleep(3)
+    print("\nI'm not scared of you...")
+    time.sleep(1)
+    print("You mutter back.\n")
+    time.sleep(3)
+    print("\nWithout hesitation, the creature opens its' mouth and lunges towards your face.\n")
+    time.sleep(4)
+    print("\nYour head gets engulfed in the mouth of the creature.\n")
+    time.sleep(3)
+    print("\nThere's nothing you can do except sit and await your fate.\n")
+    time.sleep(3)
     
-    # creature breaths in users face and makes a big deal about it
-    # this encounter ends with the user dying, possibly having it a chance opportunity
+    you_died()
 
+
+
+    # this encounter ends with the user dying, possibly having it a chance opportunity
+    # boss fight in order to get the stupid "leaf of legends"
 
 
 
