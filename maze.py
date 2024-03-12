@@ -7,7 +7,7 @@
             :)
 
     
-    By Justin Freedoooooooooo
+    By Justin Freed
 
 """
 
