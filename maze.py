@@ -8,6 +8,8 @@
 
     
     By Justin Freed
+    To do: create another branch with revamped code
+    create functions for all the time.sleep and print statements
 
 """
 
@@ -68,13 +70,9 @@ def start_game():
             c -= 1
             time.sleep(1)
             print(str(c) + " seconds\n")
-            
-
-
 
 # Function of actual start of the game.
 # Complete with a "loading bar" mechanism thing
-
 
 def start_maze():
     
@@ -811,8 +809,12 @@ def entity_encounter():
     
     you_died()
 
-
-
-
 # Start game initial function
+
+
+
+
+
+
+
 start_game()
