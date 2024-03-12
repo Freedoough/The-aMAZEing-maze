@@ -10,6 +10,8 @@
     By Justin Freed
     To do: create another branch with revamped code
     create functions for all the time.sleep and print statements
+    change the name of the leaf?
+    add more try again inputs for chance encounters
 
 """
 
