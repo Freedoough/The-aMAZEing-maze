@@ -8,6 +8,8 @@
 
     
     By Justin Freed
+
+    To do: make seperate branch with cleaned up code
 """
 
 import time
