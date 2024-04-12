@@ -57,7 +57,7 @@ def intro():
 def start_game():
     intro()
     time.sleep(3)
-    choice = input("Ready to start? (y/n):").capitalize
+    choice = input("Ready to start? (y/n):").capitalize()
     if choice == "Y":
         start_maze()
     else:
